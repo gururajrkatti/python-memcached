@@ -13,7 +13,7 @@ services:
 install: python setup.py install
 before_script: pip install -r test-requirements.txt
 script:
-  - if [ " $TRAVIS_CPU_ARCH" = "ppc64le" ]; then
+  - if [ "$TRAVIS_CPU_ARCH" = "ppc64le" ]; then
       pytest;
     else
       flake8;
